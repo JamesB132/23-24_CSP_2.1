@@ -3,7 +3,11 @@
 import tkinter as tk
 
 def test_my_button():
-    frame_auth.tkraise()
+    if(ent_username.get() == "username" and ent_password.get() == "password"):
+        frame_auth.tkraise()
+    else:
+        fail_label = tk.Label(frame_login, text="invalid user/password. Please try again")
+        fail_label.pack()
 
 # main window
 root = tk.Tk()
